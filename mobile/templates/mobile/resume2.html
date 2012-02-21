@@ -1,0 +1,30 @@
+{% extends "layout/base.html" %}
+{% block header %}
+<div data-role="header" data-theme="b">
+    <h1>Resume2</h1>
+    <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Accueil</a>
+</div> 
+{% endblock header %}
+
+{% block content %}
+
+<!-- Start of second page: #two -->
+	<div data-role="content">	
+		<h2>Suite1/2</h2>
+		<p></p>
+		<p>{{ resume2|truncatewords:3000|default:"Il n'y a pas de suite"  }}</p>		
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="#one" data-rel="back" data-icon="back" class="ui-btn-active">Retour</a></li>
+				<li><a href="/librairie/" data-icon="grid">Sommaire</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		<h4>Librairie On wap</h4>
+	</div><!-- /footer -->
+	
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "layout/base.html" %}
+{% block header %}
+	<div data-role="header" data-theme="b">
+		<h1>Sommaire</h1>
+    </div> 
+{% endblock header %}
+ 
+{% block content %}
+<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><P style="text-align:center">
+													<img src="/site-media/images/book-icon.jpg" alt="jQuery Mobile Framework" width="235" height="150" />
+												</P>
+				</h1>
+</div>
+
+<i><p class="intro" style="text-align:center"><strong>Livrairie On Mobile</strong></p></i>
+
+<div class="content-primary">	
+		<ul data-role="listview" data-inset="true" data-theme="d" data-dividertheme="b">
+			<li data-role="list-divider">Sommaire</li>
+			
+			<li><a href="sujet/">
+				<img src="/site-media/images/sujet.jpg" />
+				<h3>Sujet du mois</h3>
+				<p>Selection du comite de redaction</p>
+			</a></li>
+			
+			<li><a href="new/">
+				<img src="/site-media/images/icon-new.jpg" />
+				<h3>Nouveautes</h3>
+				<p>Retrouvez nos nouveaux livres</p>
+			</a></li>
+			
+			<li><a href="search/">
+				<img src="/site-media/images/images-search.jpg" />
+				<h3>Recherche</h3>
+				<p>Faites une recherche rapide</p>
+			</a></li>
+			
+			<li><a href="contact/">
+				<img src="/site-media/images/icon-contact.jpg" />
+				<h3>Contactez-nous</h3>
+				<p>Contact</p>
+			</a></li>
+		</ul>
+</div><!--/content-primary -->		
+
+<div data-role="footer" data-theme="b">
+		<h4>Librairie On wap </h4>
+</div><!-- /footer -->
+
+
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends "layout/base.html" %}
+{% block header %}
+<div data-role="header" data-theme="b">
+    <h1>Detail du livre</h1>
+    <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Accueil</a>
+</div> 
+{% endblock header %}
+ 
+{% block content %}
+		
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Livre</h3>
+				<h1><p>{{ livre }}</p></h1>
+			</div>
+			<div data-role="collapsible">
+				<h3>Auteur</h3>
+				{% for a in auteurs %}
+					<h1>{{ a }}</h1>
+				{% endfor %}
+			</div>
+			<div data-role="collapsible">
+				<h3>Editeur</h3>
+				<h1><p>{{ livre.publisher }}</p></h1>
+			</div>
+			<div data-role="collapsible">
+				<h3>Format</h3>
+				{{ livre.pages|floatformat }} pages,   {{ livre.width|floatformat }}x{{ livre.height|floatformat }}
+			</div>
+			<div data-role="collapsible">
+				<h3>Prix</h3>
+				<h1><p>{{ livre.price|floatformat }}$</p></h1>
+			</div>			
+			<div data-role="collapsible">
+				<h3>Langue</h3>
+				<h1><p>{{ livre.language }}</p></h1>
+			</div>			
+			<div data-role="collapsible">
+				<h3>ISBN</h3>
+				<h1><p>{{ livre.isbn }}</p></h1>
+			</div>
+		</div>
+
+	<div data-role="footer" data-theme="d">
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="/librairie/" data-icon="grid">Sommaire</a></li>
+				<li><a href="/librairie/resume/{{ livre.id }}" data-icon="forward" class="ui-btn-active">Voir la "suite"</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		<h4>Librairie On wap </h4>
+	</div><!-- /footer -->
+
+{% endblock content %}
+
